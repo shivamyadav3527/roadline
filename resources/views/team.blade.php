@@ -18,9 +18,9 @@
     <!-- Team Member 1 -->
     <div style="background:#ffffff; width:300px; border-radius:12px; text-align:center; padding:25px; 
                 box-shadow:0 6px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;">
-        <img src="{{ asset('images/neerajj.jpeg') }}"  loading="lazy"
+        <img src="{{ asset('images/jolly.jpeg') }}"  loading="lazy"
              alt="Neeraj Jolly" 
-             style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px;">
+             style="width:100px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px;">
 
         <h3 style="color:#1a1f71; margin-bottom:5px; font-size:20px; font-weight:600;">Neeraj Jolly</h3>
         <b style="color:#777; font-size:14px; margin-bottom:15px;">Founder & Director</b>

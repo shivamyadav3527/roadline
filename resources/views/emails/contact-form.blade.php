@@ -16,7 +16,7 @@
         <tr>
             <td style="background:#1a1f71; padding:25px 10px; text-align:center; color:white;">
                 <h2 style="margin:0; font-size:22px; font-weight:700; color:#ffd700; line-height:1.2;">
-                    Eco Solutions Waste Management
+                    ARADHYA ROAD LINES
                 </h2>
                 <p style="margin:8px 0 0; font-size:12px; opacity:0.9; line-height:1.2;">
                     New Contact Form Submission

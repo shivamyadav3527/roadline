@@ -40,7 +40,7 @@
         <h2 class="section-title">About Us</h2>
     </div>
     <p>
-        Established in 2006 in Kanpur, India, <strong>Eco Solutions Waste Management</strong> has been a trusted provider 
+        Established in 2006 in Kanpur, India, <strong>Aradhya Road Lines</strong> has been a trusted provider 
         of comprehensive waste transportation and management services. Under the guidance of our Founder & Director, 
         <strong>Mr. Neeraj Jolly</strong>, we have consistently grown, delivering reliable and efficient solutions 
         to our clients.
@@ -54,7 +54,7 @@
     </p>
 
     <p>
-        At <strong>Eco Solutions Waste Management</strong>, our mission is to provide environmentally responsible 
+        At <strong>Aradhya Road Lines</strong>, our mission is to provide environmentally responsible 
         waste management services while maintaining the highest standards of safety, efficiency, and client satisfaction. 
         We are committed to helping businesses stay compliant with regulations while promoting sustainable practices in 
         waste transportation and disposal.

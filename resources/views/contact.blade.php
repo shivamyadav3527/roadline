@@ -133,8 +133,42 @@
 
 <!-- Styles -->
 <style>
-/* Contact Header Transition */
-.contact-header,
+/* Contact Header */
+.contact-header {
+    color: #1a1f71;
+    font-size:36px;
+    font-weight:700;
+    margin-bottom:20px;
+    text-align:center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.contact-header::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100px; /* underline width for Contact Us */
+    height: 3px;
+    background: linear-gradient(to right, #1a1f71, #ffd700);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.contact-header:hover {
+    transform: translateY(-3px);
+    color: #0f1550;
+}
+
+.contact-header:hover::after {
+    width: 170px; /* hover width for Contact Us underline */
+}
+
+/* Contact Form Header */
 .contact-form-header {
     color: #1a1f71;
     font-size:36px;
@@ -147,41 +181,28 @@
     transition: transform 0.3s, color 0.3s;
 }
 
-.contact-header::after,
 .contact-form-header::after {
     content: "";
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 60px;
+    width: 60px; /* underline width for Request Form */
     height: 3px;
     background: linear-gradient(to right, #1a1f71, #ffd700);
     border-radius: 2px;
     transition: width 0.3s ease-in-out;
 }
 
-.contact-header:hover,
 .contact-form-header:hover {
     transform: translateY(-3px);
     color: #0f1550;
 }
 
-.contact-header:hover::after,
 .contact-form-header:hover::after {
-    width: 170px;
-}
-
-/* Hover effect for contact links */
-.contact-info a {
-    color: #1a1f71;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.contact-info a:hover {
-    color: #0f1550;
-    text-decoration: underline;
+    width: 450px; /* hover width for Request Form underline */
 }
 </style>
+
 
 @endsection

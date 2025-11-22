@@ -13,13 +13,4 @@ Route::post('/contact-submit', [PageController::class, 'contactSubmit']);
 Route::get('/team', [PageController::class, 'team']);
 Route::get('/permits', [PageController::class, 'permits']);
 
-// Route::post('/contact-submit', function (\Illuminate\Http\Request $request) {
-//     $data = $request->all();
-
-//     // Send email
-//     Mail::to('shivamyadav3527@gmail.com')->send(new ContactFormMail($data));
-
-//     // Redirect back with success message
-//     return back()->with('success', 'Thank you! Your message has been sent successfully.');
-// });
 

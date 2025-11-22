@@ -8,7 +8,7 @@
         Our Team
     </h2>
     <p style="font-size:18px; color:#555; max-width:700px; margin:0 auto;">
-        Meet the professionals who drive Eco Solutions Waste Management forward with expertise, passion, and dedication.
+        Meet the professionals who drive <b>Aradhya Road Lines</b>  forward with expertise, passion, and dedication.
     </p>
 </section>
 
@@ -23,7 +23,7 @@
              style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px;">
 
         <h3 style="color:#1a1f71; margin-bottom:5px; font-size:20px; font-weight:600;">Neeraj Jolly</h3>
-        <p style="color:#777; font-size:14px; margin-bottom:15px;">Founder & Director</p>
+        <b style="color:#777; font-size:14px; margin-bottom:15px;">Founder & Director</b>
 
         <p style="font-size:15px; color:#555; line-height:1.6;">
             With over 19 years of experience, he drives our logistics operations with strategic vision 
@@ -39,7 +39,7 @@
              style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px;">
 
         <h3 style="color:#1a1f71; margin-bottom:5px; font-size:20px; font-weight:600;">Rishabh Madan</h3>
-        <p style="color:#777; font-size:14px; margin-bottom:15px;">Operations Head</p>
+        <b style="color:#777; font-size:14px; margin-bottom:15px;">Operations Head</b>
 
         <p style="font-size:15px; color:#555; line-height:1.6;">
             Leads day-to-day transportation operations, ensuring deliveries are executed safely, efficiently, 
@@ -55,7 +55,7 @@
              style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px;">
 
         <h3 style="color:#1a1f71; margin-bottom:5px; font-size:20px; font-weight:600;">Shivam Yadav</h3>
-        <p style="color:#777; font-size:14px; margin-bottom:15px;">Marketing Lead</p>
+        <b style="color:#777; font-size:14px; margin-bottom:15px;">Marketing Lead</b>
 
         <p style="font-size:15px; color:#555; line-height:1.6;">
             Passionate marketing strategist and web creator, dedicated to promoting our brand, 

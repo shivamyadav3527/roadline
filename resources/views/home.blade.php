@@ -5,11 +5,10 @@
 <!-- Image Slider Section -->
 <section id="slider" class="slider-section">
     <div class="slides" style="display:flex; transition: transform 1s ease-in-out;">
-        <img src="{{ asset('images/loader2.jpeg') }}" loading="lazy" alt="Slide 1" class="slide-img">
-        <img src="{{ asset('images/loader1.jpeg') }}" loading="lazy" alt="Slide 2" class="slide-img">
-        <img src="{{ asset('images/loader3.jpeg') }}" loading="lazy" alt="Slide 3" class="slide-img">
-        <img src="{{ asset('images/loader5.jpeg') }}" loading="lazy" alt="Slide 4" class="slide-img">
-        <img src="{{ asset('images/loader4.jpeg') }}" loading="lazy" alt="Slide 5" class="slide-img">
+        <img src="{{ asset('images/haz3.jpeg') }}" loading="lazy" alt="Slide 1" class="slide-img">
+        <img src="{{ asset('images/haz4.jpeg') }}" loading="lazy" alt="Slide 2" class="slide-img">
+        <img src="{{ asset('images/haz1.jpeg') }}" loading="lazy" alt="Slide 4" class="slide-img">
+        <img src="{{ asset('images/haz2.jpeg') }}" loading="lazy" alt="Slide 5" class="slide-img">
     </div>
 
     <!-- Navigation Arrows -->
@@ -22,11 +21,11 @@
     
     <!-- Transitional Header -->
     <h1 class="home-header">
-        Welcome to Eco Solutions Waste Management
+        Welcome to Aradhya Road Lines
     </h1>
 
     <p style="font-size:17px; line-height:1.8; color:#333; margin-bottom:20px;">
-        At Eco Solutions Waste Management, we specialize in the safe and efficient transport of hazardous and non-hazardous waste. Our mission is to provide environmentally responsible solutions while ensuring regulatory compliance and safety for our clients and communities.
+        At Aradhya Road Lines, we specialize in the safe and efficient transport of hazardous and non-hazardous waste. Our mission is to provide environmentally responsible solutions while ensuring regulatory compliance and safety for our clients and communities.
     </p>
 
     <p style="font-size:17px; line-height:1.8; color:#333;">

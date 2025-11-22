@@ -81,7 +81,7 @@
     </h2>
 
     <p>
-        Transportation is the backbone of business growth, and at <strong>Eco Solutions Waste Management</strong>, 
+        Transportation is the backbone of business growth, and at <strong>Aradhya Road Lines</strong>, 
         we provide secure, compliant, and efficient transportation solutions across India — 
         specializing in both hazardous and non-hazardous waste management.
     </p>

@@ -54,6 +54,90 @@
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
+
+    /* Vehicles Table Styling */
+    .vehicles-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 17px;
+        text-align: center;
+        margin-top: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .vehicles-table thead tr {
+        background: #1a1f71;
+        color: white;
+    }
+
+    .vehicles-table th, 
+    .vehicles-table td {
+        padding: 14px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .vehicles-table th {
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .vehicles-table td {
+        font-weight: 500;
+        color: #333;
+    }
+
+    .vehicles-table tbody tr:hover {
+        background: #f1f1f1;
+    }
+
+    /* Permits Cards Container */
+    .permits-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    .permit-card iframe {
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .permit-card {
+            flex: 1 1 100%;
+        }
+
+        .permit-card iframe {
+            height: 400px;
+        }
+
+        .vehicles-table th, .vehicles-table td {
+            padding: 12px;
+        }
+
+        .permits-header {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .vehicles-table th, .vehicles-table td {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .permits-header {
+            font-size: 24px;
+        }
+    }
+
 </style>
 
 <!-- PERMITS PAGE -->
@@ -71,50 +155,51 @@
     </p>
 
     <!-- Permits Images Section -->
-    <div>
-        <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">Our Permits</h3>
+    <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">Our Permits</h3>
+    <div class="permits-container">
+        <div class="permit-card">
+            <h4 style="color:#ffd700; font-size:18px; margin-bottom:15px; font-weight:600;">
+                Waste Transport Permit
+            </h4>
+            <iframe src="{{ asset('pdfs/permit.pdf') }}"></iframe>
+        </div>
 
         <div class="permit-card">
             <h4 style="color:#ffd700; font-size:18px; margin-bottom:15px; font-weight:600;">
-                Hazardous Waste Transport Permit
+                Waste Transport Permit
             </h4>
-            <iframe src="{{ asset('pdfs/permit.pdf') }}" 
-                    style="width:100%; height:600px; border-radius:10px; border:none;">
-            </iframe>
+            <iframe src="{{ asset('pdfs/permit.pdf') }}"></iframe>
         </div>
-
     </div>
 
     <!-- Vehicles Table -->
-    <div style="margin-bottom:50px;">
-        <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">Vehicles With Valid Permits</h3>
-        <table style="width:100%; border-collapse:collapse; font-size:17px; text-align:left;">
-            <thead>
-                <tr style="background:#1a1f71; color:white;">
-                    <th style="padding:14px;">#</th>
-                    <th style="padding:14px;">Vehicle Number</th>
-                    <th style="padding:14px;">Permit Validity</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="border-bottom:1px solid #ccc;">
-                    <td style="padding:12px;">1</td>
-                    <td style="padding:12px;">UP78 XY 1234</td>
-                    <td style="padding:12px;">Valid till 2026</td>
-                </tr>
-                <tr style="border-bottom:1px solid #ccc;">
-                    <td style="padding:12px;">2</td>
-                    <td style="padding:12px;">UP78 AB 5678</td>
-                    <td style="padding:12px;">Valid till 2027</td>
-                </tr>
-                <tr style="border-bottom:1px solid #ccc;">
-                    <td style="padding:12px;">3</td>
-                    <td style="padding:12px;">UP78 CD 7788</td>
-                    <td style="padding:12px;">Valid till 2028</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">Our Fleet</h3>
+    <table class="vehicles-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Vehicle Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>UP71T0628</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>UP78FN6728</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>UP78DT2188</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>UP78HT6699</td>
+            </tr>
+        </tbody>
+    </table>
 
 </section>
 

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco Solutions Waste Management</title>
+    <meta name="description" content="Eco Solutions Waste Management provides reliable waste collection, recycling services, and eco-friendly disposal solutions for homes, businesses, and industries. Contact us for sustainable waste management services.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -170,6 +171,12 @@
                 display: flex;
             }
         }
+        .active-link {
+            color: #ffd700 !important;
+            font-weight: 700;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 3px;
+        }
     </style>
 </head>
 
@@ -190,13 +197,24 @@
 
         <!-- Navigation -->
         <nav id="navMenu">
-            <a class="nav-link" href="{{ url('/') }}">Home</a>
-            <a class="nav-link" href="{{ url('/services') }}">Services</a>
-            <a class="nav-link" href="{{ url('/permits') }}">Permits & Forms</a>
-            <a class="nav-link" href="{{ url('/about') }}">About Us</a>
-            <a class="nav-link" href="{{ url('/team') }}">Our Team</a>
-            <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
+            <a class="nav-link {{ Request::is('/') ? 'active-link' : '' }}" href="{{ url('/') }}">Home</a>
+
+            <a class="nav-link {{ Request::is('services') ? 'active-link' : '' }}" 
+            href="{{ url('/services') }}">Services</a>
+
+            <a class="nav-link {{ Request::is('permits') ? 'active-link' : '' }}" 
+            href="{{ url('/permits') }}">Permits & Forms</a>
+
+            <a class="nav-link {{ Request::is('about') ? 'active-link' : '' }}" 
+            href="{{ url('/about') }}">About Us</a>
+
+            <a class="nav-link {{ Request::is('team') ? 'active-link' : '' }}" 
+            href="{{ url('/team') }}">Our Team</a>
+
+            <a class="nav-link {{ Request::is('contact') ? 'active-link' : '' }}" 
+            href="{{ url('/contact') }}">Contact Us</a>
         </nav>
+
     </header>
 
     <main>
@@ -207,7 +225,7 @@
         <p style="margin:0; font-size:14px;">&copy; 2025 Eco Solutions Waste Management</p>
         <div style="margin-top:10px; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:10px; font-size:14px;">
             <span>Email: <a href="mailto:ecosolutionwastemanangement@gmail.com"
-                    style="color:white; text-decoration:underline;">ecosolutionwastemanangement@gmail.com</a></span> |
+                    style="color:white; text-decoration:underline;">ecosolutionwastemanagement@gmail.com</a></span> |
             <span>Phone: <a href="tel:+918318612573" style="color:white; text-decoration:underline;">+91 8318612573</a></span> |
             <span>Follow us:</span>
             <a href="https://facebook.com" target="_blank" style="color:white; font-size:18px;"><i

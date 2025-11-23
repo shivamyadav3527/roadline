@@ -49,6 +49,7 @@ class PageController extends Controller
         ]);
 
         // Mail::to('ecosolutionwastemanangement@gmail.com')->send(new ContactFormMail($data));
+        // Mail::to('ecosolutionwastemanangement@gmail.com')->send(new ContactFormMail($data));
             Mail::to('shivamyadav3527@gmail.com')->send(new ContactFormMail($data));
 
 

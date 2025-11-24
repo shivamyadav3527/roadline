@@ -19,6 +19,13 @@
 <!-- About Us Section -->
 <section id="about-us" style="padding:45px; max-width:90%; margin:0 auto;">
     
+    <!-- Success Message -->
+    @if(session('success'))
+        <div style="background:#e8f9f1; color:#1a1f71; padding:15px 20px; border-left:5px solid #1a1f71; margin:20px 0; border-radius:6px; font-weight:500;">
+            {{ session('success') }}
+        </div>
+    @endif
+    
     <!-- Transitional Header -->
     <h1 class="home-header">
         Welcome to Aradhya Road Lines
@@ -31,15 +38,26 @@
     <p style="font-size:17px; line-height:1.8; color:#333;">
         Proper waste management is critical to protecting public health and the environment. Our experienced team uses advanced techniques and industry best practices to handle, transport, and dispose of waste responsibly. By partnering with us, businesses can streamline their waste management processes, reduce environmental impact, and stay fully compliant with government regulations.
     </p>
+
+    <!-- Request Pickup Button -->
+    <div style="text-align:center; margin:20px 0;">
+        <button onclick="openPickupForm()" 
+            style="padding:12px 25px; font-size:18px; background:#1a1f71; color:white; border:none; border-radius:8px; cursor:pointer;">
+            Request Pickup
+        </button>
+    </div>
+
 </section>
 
 <!-- Hazardous vs Non-Hazardous Section -->
-<section id="hazard" style="padding:50px; max-width:90%; margin:0 auto;">
-    <h2 style="color:#1a1f71; font-size:32px; font-weight:700; margin-bottom:25px;">
+<section id="hazard" style="padding:10px 20px; max-width:90%; margin:0 auto;">
+
+    <h2 style="color:#1a1f71; font-size:32px; font-weight:700; margin-bottom:15px;">
         Differences Between Hazardous and Non-Hazardous Material
     </h2>
 
-    <div style="margin-top:20px; line-height:1.8; font-size:17px; color:#333;">
+    <div style="line-height:1.8; font-size:17px; color:#333; padding-left:10px;">
+
         <h3 style="color:#ff8800; font-size:22px; margin-bottom:10px;">Non-Hazardous Waste</h3>
         <p>
             Non-hazardous waste does not pose a threat to human health or the environment. Examples include 
@@ -51,15 +69,20 @@
         <p>
             Hazardous waste can be dangerous to both health and the environment. It includes:
         </p>
-        <ul style="margin-left:30px; margin-top:10px; line-height:1.6;">
+
+        <ul style="padding-left:20px; list-style-position: inside; line-height:1.6;">
             <li>Listed Waste (F-list, K-list, P-list, U-list)</li>
             <li>Characterized Waste (Ignitable, Corrosive, Reactive, Toxic)</li>
             <li>Universal Waste (Batteries, lamps, equipment containing mercury, pesticides)</li>
             <li>Mixed Waste (Hazardous combined with radioactive materials)</li>
             <li>E-Waste (electronic waste such as phones, computers, TVs, etc.)</li>
         </ul>
+
     </div>
+
 </section>
+
+
 
 <!-- Plastic Waste Section -->
 <section id="plastic" style="padding:45px; max-width:90%; margin:0 auto;">
@@ -74,9 +97,203 @@
          style="width:100%; margin-top:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
 </section>
 
+
+<!-- Clients Section -->
+<section id="clients" style="padding:50px 15px; max-width:1200px; margin:0 auto; text-align:center;">
+
+    <h2 style="color:#1a1f71; font-size:32px; font-weight:700; margin-bottom:20px;">
+        Our Esteemed Clients
+    </h2>
+
+    <p style="font-size:17px; color:#555; margin-bottom:40px;">
+        We are proud to partner with leading companies in diverse industries, providing reliable waste management solutions.
+    </p>
+
+    <div class="clients-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center; justify-items:center;">
+
+        <div class="client-logo">
+            <img src="{{ asset('images/pepsi.png') }}" alt="PepsiCo" class="client-img">
+        </div>
+        <div class="client-logo">
+            <img src="{{ asset('images/tatasteel.png') }}" alt="Tata Steel" class="client-img">
+        </div>
+        <div class="client-logo">
+            <img src="{{ asset('images/moon.jpg') }}" alt="Moon Beverages" class="client-img">
+        </div>
+        <div class="client-logo">
+            <img src="{{ asset('images/bharat.jpg') }}" alt="Bharat Oil & Waste Management" class="client-img">
+        </div>
+        <div class="client-logo">
+            <img src="{{ asset('images/parle.jpg') }}" alt="Parle Agro" class="client-img">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+@if(session('success'))
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const successBox = document.querySelector('[style*="background:#e8f9f1"]');
+
+        if (successBox) {
+            // Close modal if open
+            closePickupForm();
+
+            // Scroll to success message
+            setTimeout(() => {
+                window.scrollTo({
+                    top: successBox.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
+    });
+</script>
+@endif
+
+
+<!-- Popup Form Modal -->
+<div id="pickupFormModal" class="pickup-modal">
+    <div class="pickup-modal-content">
+
+        <span class="pickup-close" onclick="closePickupForm()">&times;</span>
+
+        <h2 style="text-align:center; color:#1a1f71; margin-bottom:20px;">Request Waste Pickup</h2>
+
+        <form action="{{ route('pickup.submit') }}" method="POST">
+            @csrf
+
+            <label>Name</label>
+            <input type="text" name="name" required>
+
+            <label>Phone</label>
+            <input type="text" name="phone" required>
+
+            <label>Email</label>
+            <input type="email" name="email">
+
+            <label>Pickup Address</label>
+            <textarea name="address" required></textarea>
+
+            <label>Waste Type</label>
+            <select name="waste_type" required>
+                <option value="commercial">Commercial Waste</option>
+                <option value="chemical">Chemical Waste</option>
+                <option value="hazardous">Hazardous Waste</option>
+                <option value="plastic">Plastic Waste</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>Description (Optional)</label>
+            <textarea name="description"></textarea>
+
+            <button type="submit" class="pickup-submit-btn">Submit Request</button>
+        </form>
+
+    </div>
+</div>
+
+
+
 <!-- Styles -->
 <style>
-    /* Home/About Header */
+
+    .client-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px; /* consistent height for all logos */
+        padding: 10px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .client-logo img.client-img {
+        max-height: 80px; /* ensures logos fit inside container */
+        width: auto;
+        object-fit: contain;
+        filter: grayscale(0%);
+        transition: all 0.3s;
+    }
+
+    .client-logo img.client-img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+
+
+    /* Modal Background */
+    .pickup-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    /* Modal Box */
+    .pickup-modal-content {
+        background: #fff;
+        width: 90%;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 25px;
+        border-radius: 12px;
+        max-height: 85vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        animation: popUp 0.25s ease-out;
+        position: relative;
+    }
+
+    @keyframes popUp {
+        from { transform: scale(0.9); opacity: 0; }
+        to   { transform: scale(1); opacity: 1; }
+    }
+
+    .pickup-close {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 28px;
+        cursor: pointer;
+        color: #444;
+    }
+
+    .pickup-modal-content form input,
+    .pickup-modal-content form textarea,
+    .pickup-modal-content form select {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+
+    .pickup-submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #1a1f71;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    /* Header Animation */
     .home-header {
         color: #1a1f71;
         font-size: 36px;
@@ -84,7 +301,6 @@
         text-align: center;
         margin-bottom: 25px;
         position: relative;
-        display: block;
         padding-bottom: 8px;
         transition: transform 0.3s, color 0.3s;
     }
@@ -111,7 +327,7 @@
         width: 500px;
     }
 
-    /* Slider Styles */
+    /* Slider */
     .slide-img {
         width:100%;
         flex-shrink:0;
@@ -147,9 +363,16 @@
     @media(max-width:768px){
         .slide-img { height:300px; }
     }
+
+    .pickup-submit-btn.loading {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
 </style>
 
-<!-- JS for Slider -->
+
+<!-- JS -->
 <script>
     const slidesContainer = document.querySelector('.slides');
     const slides = document.querySelectorAll('.slide-img');
@@ -183,6 +406,36 @@
         clearInterval(slideInterval);
         slideInterval = setInterval(nextSlide, 3000);
     });
+
+    // Add loading state to submit button
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector('.pickup-modal-content form');
+        const btn = document.querySelector('.pickup-submit-btn');
+
+        form.addEventListener('submit', function () {
+            btn.disabled = true;
+            btn.innerHTML = "Sending...";
+            btn.style.opacity = "0.7";
+            btn.style.cursor = "not-allowed";
+        });
+    });
+
+    // Pickup modal
+    function openPickupForm(){
+        document.getElementById("pickupFormModal").style.display = "block";
+    }
+
+    function closePickupForm(){
+        document.getElementById("pickupFormModal").style.display = "none";
+    }
+
+    // Close when clicking outside
+    window.onclick = function(event){
+        let modal = document.getElementById("pickupFormModal");
+        if(event.target === modal){
+            modal.style.display = "none";
+        }
+    }
 </script>
 
 @endsection

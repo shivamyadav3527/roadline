@@ -12,5 +12,9 @@ Route::get('/contact', [PageController::class, 'contact']);
 Route::post('/contact-submit', [PageController::class, 'contactSubmit']);
 Route::get('/team', [PageController::class, 'team']);
 Route::get('/permits', [PageController::class, 'permits']);
+Route::post('/pickup-submit', [PageController::class, 'submit'])->name('pickup.submit');
 
 
+
+Route::post('/pickup-submit', [App\Http\Controllers\PickupController::class, 'submitRequest'])
+    ->name('pickup.submit');

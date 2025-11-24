@@ -48,11 +48,16 @@ class PageController extends Controller
             'message' => 'required',
         ]);
 
-        // Mail::to('ecosolutionwastemanangement@gmail.com')->send(new ContactFormMail($data));
-        // Mail::to('ecosolutionwastemanangement@gmail.com')->send(new ContactFormMail($data));
-            Mail::to('shivamyadav3527@gmail.com')->send(new ContactFormMail($data));
+            Mail::to('ecosolutionwastemanagement@gmail.com')->send(new ContactFormMail($data));
 
 
         return back()->with('success', 'Your message has been sent! We will contact you soon.');
     }
+
+    public function submit(Request $request)
+    {
+        // save to DB or send email
+        return back()->with('success', 'Pickup request submitted successfully!');
+    }
+
 }

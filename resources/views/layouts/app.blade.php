@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Solutions Waste Management</title>
-    <meta name="description" content="Eco Solutions Waste Management provides reliable waste collection, recycling services, and eco-friendly disposal solutions for homes, businesses, and industries. Contact us for sustainable waste management services.">
+    <title>All India Waste Management And Transport</title>
+    <meta name="description" content="All India Waste Management And Transport provides reliable waste collection, recycling services, and eco-friendly disposal solutions for homes, businesses, and industries. Contact us for sustainable waste management services.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -186,7 +186,7 @@
         <div class="header-left">
             <a href="{{ url('/') }}" style="display:flex; align-items:center; text-decoration:none;">
                 <img src="{{ asset('images/logo2.avif') }}" class="logo-img" alt="Logo">
-                <h1 style= "padding: 1px"class="site-title">Eco Solutions Waste Management</h1>
+                <h1 style= "padding: 1px"class="site-title">All India Waste Management And Transport</h1>
             </a>
         </div>
 
@@ -222,7 +222,7 @@
     </main>
 
     <footer style="color:white; padding:20px 10px; text-align:center;">
-        <p style="margin:0; font-size:14px;">&copy; 2025 Eco Solutions Waste Management</p>
+        <p style="margin:0; font-size:14px;">&copy; 2025 All India Waste Management And Transport</p>
         <div style="margin-top:10px; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:10px; font-size:14px;">
             <span>Email: <a href="mailto:ecosolutionwastemanangement@gmail.com"
                     style="color:white; text-decoration:underline;">ecosolutionwastemanagement@gmail.com</a></span> |

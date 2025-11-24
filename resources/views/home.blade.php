@@ -98,7 +98,6 @@
 </section>
 
 
-<!-- Clients Section -->
 <section id="clients" style="padding:50px 15px; max-width:1200px; margin:0 auto; text-align:center;">
 
     <h2 style="color:#1a1f71; font-size:32px; font-weight:700; margin-bottom:20px;">
@@ -109,22 +108,31 @@
         We are proud to partner with leading companies in diverse industries, providing reliable waste management solutions.
     </p>
 
-    <div class="clients-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center; justify-items:center;">
+    <div class="clients-container" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
 
-        <div class="client-logo">
-            <img src="{{ asset('images/pepsi.png') }}" alt="PepsiCo" class="client-img">
+        <div class="client-card">
+            <img src="{{ asset('images/pepsi.png') }}" alt="PepsiCo">
+            <p>PepsiCo</p>
         </div>
-        <div class="client-logo">
-            <img src="{{ asset('images/tatasteel.png') }}" alt="Tata Steel" class="client-img">
+
+        <div class="client-card">
+            <img src="{{ asset('images/tatasteel.png') }}" alt="Tata Steel">
+            <p>Tata Steel</p>
         </div>
-        <div class="client-logo">
-            <img src="{{ asset('images/moon.jpg') }}" alt="Moon Beverages" class="client-img">
+
+        <div class="client-card">
+            <img src="{{ asset('images/moon.jpg') }}" alt="Moon Beverages">
+            <p>Moon Beverages</p>
         </div>
-        <div class="client-logo">
-            <img src="{{ asset('images/bharat.jpg') }}" alt="Bharat Oil & Waste Management" class="client-img">
+
+        <div class="client-card">
+            <img src="{{ asset('images/bharato.jpeg') }}" alt="Bharat Oil & Waste Management">
+            <p>Bharat Oil & Waste Management</p>
         </div>
-        <div class="client-logo">
-            <img src="{{ asset('images/parle.jpg') }}" alt="Parle Agro" class="client-img">
+
+        <div class="client-card">
+            <img src="{{ asset('images/parle.jpg') }}" alt="Parle Agro">
+            <p>Parle Agro</p>
         </div>
 
     </div>
@@ -367,6 +375,57 @@
     .pickup-submit-btn.loading {
         opacity: 0.7;
         pointer-events: none;
+    }
+
+    .clients-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .client-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        width: 180px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client-card img {
+        max-height: 80px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 12px;
+        transition: transform 0.3s;
+    }
+
+    .client-card p {
+        font-weight: 500;
+        color: #1a1f71;
+        font-size: 15px;
+    }
+
+    .client-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width:768px){
+        .client-card {
+            width: 45%;
+        }
+    }
+
+    @media (max-width:480px){
+        .client-card {
+            width: 90%;
+        }
     }
 
 </style>

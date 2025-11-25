@@ -40,9 +40,8 @@
         }
 
         .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px; /* desktop default */
+            max-width: 75%;
+            overflow: hidden;
         }
 
         .logo-img {
@@ -50,17 +49,19 @@
             height: 60px;
             object-fit: cover;
             border-radius: 10px;
-            margin-left: -10px; /* shift logo slightly left */
+            margin-left: 0px; /* shift logo slightly left */
             margin-right: 10px; /* shift logo slightly left */
 
         }
 
         .site-title {
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             display: inline-block;
             font-weight: 700;
             color: #ffd700;
-            font-size: 22px; /* desktop default */
+            font-size: 22px; 
         }
 
         /* Desktop navigation */
@@ -91,6 +92,9 @@
         main {
             margin-top: 100px;
             flex: 1;
+            display: flex;
+            flex-direction: column;
+
         }
 
         footer {
@@ -155,12 +159,19 @@
             }
 
             .site-title {
-                font-size: 16px;
+                white-space: normal !important;
+                font-size: 13px;
+                max-width: 190px; /* forces 2-line wrap */
+
             }
 
             .mobile-menu-icon {
-                display: block;
-                margin-left: 15px;
+                display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2000;
             }
 
             nav {
@@ -186,7 +197,7 @@
         <div class="header-left">
             <a href="{{ url('/') }}" style="display:flex; align-items:center; text-decoration:none;">
                 <img src="{{ asset('images/logo2.avif') }}" class="logo-img" alt="Logo">
-                <h1 style= "padding: 1px"class="site-title">All India Waste Management And Transport</h1>
+                <h1 class="site-title">All India Waste Management And Transport</h1>
             </a>
         </div>
 

@@ -14,7 +14,17 @@ Route::get('/team', [PageController::class, 'team']);
 Route::get('/permits', [PageController::class, 'permits']);
 Route::post('/pickup-submit', [PageController::class, 'submit'])->name('pickup.submit');
 
-
-
 Route::post('/pickup-submit', [App\Http\Controllers\PickupController::class, 'submitRequest'])
     ->name('pickup.submit');
+    
+Route::get('/waste-management', function () {
+    return view('pages.waste-management');
+})->name('waste.management');
+
+Route::get('/hazardous-waste', function () {
+    return view('pages.hazardous');
+})->name('hazardous.waste');
+
+Route::get('/non-hazardous-waste', function () {
+    return view('pages.nonhazardous');
+})->name('nonhazardous.waste');

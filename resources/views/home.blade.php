@@ -32,11 +32,18 @@
     </h1>
 
     <p style="font-size:17px; line-height:1.8; color:#333; margin-bottom:20px;">
-        At Aradhya Road Lines, we specialize in the safe and efficient transport of hazardous and non-hazardous waste. Our mission is to provide environmentally responsible solutions while ensuring regulatory compliance and safety for our clients and communities.
+        At Aradhya Road Lines, we specialize in the safe and efficient transport of hazardous and non-hazardous waste. 
+        Our mission is to provide environmentally responsible solutions while ensuring regulatory compliance and safety for our 
+        <a href="#clients" style="color:#1a1f71; font-weight:600; text-decoration:underline; cursor:pointer;">
+            clients
+        </a>
+        and communities.
     </p>
 
+
     <p style="font-size:17px; line-height:1.8; color:#333;">
-        Proper waste management is critical to protecting public health and the environment. Our experienced team uses advanced techniques and industry best practices to handle, transport, and dispose of waste responsibly. By partnering with us, businesses can streamline their waste management processes, reduce environmental impact, and stay fully compliant with government regulations.
+        Proper <a href="{{ route('waste.management') }}" style="color:#1a1f71; font-weight:bold;">
+        waste management</a> is critical to protecting public health and the environment. Our experienced team uses advanced techniques and industry best practices to handle, transport, and dispose of waste responsibly. By partnering with us, businesses can streamline their waste management processes, reduce environmental impact, and stay fully compliant with government regulations.
     </p>
 
     <!-- Request Pickup Button -->
@@ -58,14 +65,16 @@
 
     <div style="line-height:1.8; font-size:17px; color:#333; padding-left:10px;">
 
-        <h3 style="color:#ff8800; font-size:22px; margin-bottom:10px;">Non-Hazardous Waste</h3>
+        <h3 style="color:#ffd700; font-size:22px; margin-bottom:10px;"><a href="{{ route('nonhazardous.waste') }}" style="color:#ffd700; font-weight:bold;">
+    Non-Hazardous Waste</a></h3>
         <p>
             Non-hazardous waste does not pose a threat to human health or the environment. Examples include 
             general garbage, sludge, and residual waste from industries such as construction, mining, agriculture, 
             and municipal services.
         </p>
 
-        <h3 style="color:#ff8800; font-size:22px; margin-top:20px; margin-bottom:10px;">Hazardous Waste</h3>
+        <h3 style="color:#ffd700; font-size:22px; margin-top:20px; margin-bottom:10px;"><a href="{{ route('hazardous.waste') }}" style="color:#ffd700; font-weight:bold;">
+    Hazardous Waste</a></h3>
         <p>
             Hazardous waste can be dangerous to both health and the environment. It includes:
         </p>

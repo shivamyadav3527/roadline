@@ -83,7 +83,9 @@
     <p>
         Transportation is the backbone of business growth, and at <strong>Aradhya Road Lines</strong>, 
         we provide secure, compliant, and efficient transportation solutions across India — 
-        specializing in both hazardous and non-hazardous waste management.
+        specializing in both <a href="{{ route('hazardous.waste') }}" style="font-weight:bold;">
+    hazardous</a> and <a href="{{ route('nonhazardous.waste') }}" style="font-weight:bold;">
+    non-hazardous</a> waste management.
     </p>
 
     <!-- WHAT WE TRANSPORT -->

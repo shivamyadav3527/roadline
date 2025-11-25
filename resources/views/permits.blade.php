@@ -38,6 +38,19 @@
         width: 250px;
     }
 
+    /* PCB Certification Highlight */
+    .pcb-cert {
+        color: #1a1f71;
+        font-weight: 700;
+        background: #e8f9f1;
+        border-left: 5px solid #1a1f71;
+        padding: 15px 20px;
+        border-radius: 6px;
+        margin: 25px 0 40px;
+        text-align: center;
+        font-size: 17px;
+    }
+
     /* Hover Animation for Permits Card */
     .permit-card {
         flex: 1 1 45%;
@@ -148,6 +161,11 @@
         Permits & Forms
     </h2>
 
+    <!-- PCB Certification Reference -->
+    <div class="pcb-cert">
+        <strong>PCB Certified:</strong> Reference Number <strong>29486/UPPCB</strong>
+    </div>
+
     <p style="font-size:17px; line-height:1.8; text-align:center; max-width:850px; margin:0 auto 40px;">
         Below are the official permits and authorization documents required for transporting 
         hazardous and non-hazardous waste. You can also view our fleet of permitted vehicles and 
@@ -166,7 +184,7 @@
 
         <div class="permit-card">
             <h4 style="color:#ffd700; font-size:18px; margin-bottom:15px; font-weight:600;">
-                Waste Transport Permit
+                Hazardous Waste Permit
             </h4>
             <iframe src="{{ asset('pdfs/permit.pdf') }}"></iframe>
         </div>

@@ -56,8 +56,8 @@
                 </p>
 
                 <p><strong>Email:</strong><br>
-                    <a href="mailto:ecosolutionwastemanangement@gmail.com">
-                        ecosolutionwastemanangement@gmail.com
+                    <a href="mailto:allindiawastemangement@gmail.com">
+                        allindiawastemangement@gmail.com
                     </a>
                 </p>
             </div>

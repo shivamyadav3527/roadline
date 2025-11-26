@@ -120,29 +120,10 @@
     <div class="clients-container" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
 
         <div class="client-card">
-            <img src="{{ asset('images/pepsi.png') }}" alt="PepsiCo">
-            <p>PepsiCo</p>
-        </div>
-
-        <div class="client-card">
-            <img src="{{ asset('images/tatasteel.png') }}" alt="Tata Steel">
-            <p>Tata Steel</p>
-        </div>
-
-        <div class="client-card">
-            <img src="{{ asset('images/moon.jpg') }}" alt="Moon Beverages">
-            <p>Moon Beverages</p>
-        </div>
-
-        <div class="client-card">
             <img src="{{ asset('images/bharato.jpeg') }}" alt="Bharat Oil & Waste Management">
             <p>Bharat Oil & Waste Management</p>
         </div>
 
-        <div class="client-card">
-            <img src="{{ asset('images/parle.jpg') }}" alt="Parle Agro">
-            <p>Parle Agro</p>
-        </div>
 
     </div>
 

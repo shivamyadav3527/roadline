@@ -2,10 +2,32 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/jpeg" href="{{ asset('favicon.jpeg')}}">
+    <link rel="shortcut icon" href="{{ asset('favicon.jpeg')}}">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All India Waste Management And Transport</title>
-    <meta name="description" content="All India Waste Management And Transport provides reliable waste collection, recycling services, and eco-friendly disposal solutions for homes, businesses, and industries. Contact us for sustainable waste management services.">
+
+    <title>All India Waste Management Company | UPPCB Certified | Hazardous Waste Experts</title>
+
+    <meta name="description" 
+        content="All India Waste Management Company is a UPPCB certified hazardous waste management provider offering disposal, recycling, transportation, biomedical waste handling, and industrial waste solutions across India. Reliable, eco-friendly, and government-approved waste management services.">
+
+    <meta name="keywords" 
+        content="waste management company, hazardous waste certified, UPPCB certified, hazardous waste disposal, industrial waste management, biomedical waste disposal, waste recycling services, waste transport company, eco-friendly waste solutions, India waste management">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="All India Waste Management Company">
+
+    <!-- Open Graph for social SEO -->
+    <meta property="og:title" content="All India Waste Management Company | UPPCB Certified">
+    <meta property="og:description" content="Government-approved hazardous & non-hazardous waste management, recycling, and transportation services across India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allindiawastemanagementandtransport.com/">
+    <meta property="og:image" content="https://allindiawastemanagementandtransport.com/images/new-logo.jpeg
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://allindiawastemanagementandtransport.com/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -61,7 +83,21 @@
             display: inline-block;
             font-weight: 700;
             color: #ffd700;
-            font-size: 22px; 
+            font-size: 22px;        
+            opacity: 0;
+            transform: translateY(8px);
+            animation: fadeSlideIn 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Desktop navigation */
@@ -196,7 +232,7 @@
     <header id="mainHeader">
         <div class="header-left">
             <a href="{{ url('/') }}" style="display:flex; align-items:center; text-decoration:none;">
-                <img src="{{ asset('images/logo2.avif') }}" class="logo-img" alt="Logo">
+                <img src="{{ asset('images/new-logo.jpeg') }}" class="logo-img" alt="Logo">
                 <h1 class="site-title">All India Waste Management And Transport</h1>
             </a>
         </div>
@@ -235,13 +271,13 @@
     <footer style="color:white; padding:20px 10px; text-align:center;">
         <p style="margin:0; font-size:14px;">&copy; 2025 All India Waste Management And Transport</p>
         <div style="margin-top:10px; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:10px; font-size:14px;">
-            <span>Email: <a href="mailto:ecosolutionwastemanangement@gmail.com"
-                    style="color:white; text-decoration:underline;">ecosolutionwastemanagement@gmail.com</a></span> |
+            <span>Email: <a href="mailto:allindiawastemangement@gmail.com"
+                    style="color:white; text-decoration:underline;">allindiawastemangement@gmail.com</a></span> |
             <span>Phone: <a href="tel:+918318612573" style="color:white; text-decoration:underline;">+91 8318612573</a></span> |
             <span>Follow us:</span>
-            <a href="https://facebook.com" target="_blank" style="color:white; font-size:18px;"><i
+            <a href="https://www.facebook.com/profile.php?id=61584134677581" target="_blank" style="color:white; font-size:18px;"><i
                     class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com" target="_blank" style="color:white; font-size:18px;"><i
+            <a href="https://www.instagram.com/allindiawastemangement?igsh=c21pdzF1b2cyYXF2" target="_blank" style="color:white; font-size:18px;"><i
                     class="fab fa-instagram"></i></a>
         </div>
     </footer>

@@ -48,7 +48,7 @@ class PageController extends Controller
             'message' => 'required',
         ]);
 
-            Mail::to('allindiawastemangement@gmail.com')->send(new ContactFormMail($data));
+            Mail::to('allindiawastemanagement@gmail.com')->send(new ContactFormMail($data));
 
 
         return back()->with('success', 'Your message has been sent! We will contact you soon.');

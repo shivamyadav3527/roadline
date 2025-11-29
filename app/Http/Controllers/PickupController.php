@@ -19,7 +19,7 @@ class PickupController extends Controller
             'description' => 'nullable|string'
         ]);
 
-        Mail::to('allindiawastemangement@gmail.com')->send(new PickupRequestMail($validated));
+        Mail::to('allindiawastemanagement@gmail.com')->send(new PickupRequestMail($validated));
 
         return back()->with('success', 'Your waste pickup request has been submitted successfully. We will contact you shortly!');
     }

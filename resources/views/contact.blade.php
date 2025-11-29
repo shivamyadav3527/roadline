@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- CONTACT HEADER -->
-<section style="text-align:center; padding:50px 20px; background-color:#eef3f8;">
+<section style="text-align:center; padding:30px 20px; background-color:#eef3f8;">
     <h2 class="contact-header">
         Contact Us
     </h2>
@@ -56,9 +56,9 @@
                 </p>
 
                 <p><strong>Email:</strong><br>
-                    <a href="mailto:allindiawastemangement@gmail.com">
-                        allindiawastemangement@gmail.com
-                    </a>
+                    <a href="mailto:allindiawastemanagement@gmail.com">
+                        allindiawastemanagement@gmail.com
+                    </a>    
                 </p>
             </div>
         </div>

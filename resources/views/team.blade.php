@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- TEAM HEADER -->
-<section style="text-align:center; padding:50px 20px; background:#eef3f8;">
+<section style="text-align:center; padding:30px 20px; background:#eef3f8;">
     <h2 class="team-header">
         Our Team
     </h2>

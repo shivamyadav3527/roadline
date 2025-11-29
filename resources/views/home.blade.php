@@ -5,10 +5,10 @@
 <!-- Image Slider Section -->
 <section id="slider" class="slider-section">
     <div class="slides" style="display:flex; transition: transform 1s ease-in-out;">
-        <img src="{{ asset('images/haz3.jpeg') }}" loading="lazy" alt="Slide 1" class="slide-img">
-        <img src="{{ asset('images/haz4.jpeg') }}" loading="lazy" alt="Slide 2" class="slide-img">
-        <img src="{{ asset('images/haz1.jpeg') }}" loading="lazy" alt="Slide 4" class="slide-img">
-        <img src="{{ asset('images/haz2.jpeg') }}" loading="lazy" alt="Slide 5" class="slide-img">
+        <img src="{{ asset('images/truck10.jpeg') }}" loading="lazy" alt="Slide 4" class="slide-img">
+        <img src="{{ asset('images/truck11.jpeg') }}" loading="lazy" alt="Slide 4" class="slide-img">
+        <img src="{{ asset('images/truck15.jpeg') }}" loading="lazy" alt="Slide 1" class="slide-img">
+
     </div>
 
     <!-- Navigation Arrows -->
@@ -18,7 +18,7 @@
 
 <!-- About Us Section -->
 <section id="about-us" style="padding:45px; max-width:90%; margin:0 auto;">
-    
+
     <!-- Success Message -->
     @if(session('success'))
         <div style="background:#e8f9f1; color:#1a1f71; padding:15px 20px; border-left:5px solid #1a1f71; margin:20px 0; border-radius:6px; font-weight:500;">
@@ -27,34 +27,54 @@
     @endif
     
     <!-- Transitional Header -->
-    <h1 class="home-header">
-        Welcome to Aradhya Road Lines
+    <h1 class="home-header" style="color:#1a1f71; font-size:36px; font-weight:700; margin-bottom:25px;">
+        Welcome to Aradhya Road Lines – Kanpur's Trusted Waste Management Partner
     </h1>
 
     <p style="font-size:17px; line-height:1.8; color:#333; margin-bottom:20px;">
-        At Aradhya Road Lines, we specialize in the safe and efficient transport of hazardous and non-hazardous waste. 
-        Our mission is to provide environmentally responsible solutions while ensuring regulatory compliance and safety for our 
+        At <strong>Aradhya Road Lines</strong>, based in <strong>Kanpur, Uttar Pradesh</strong>, we specialize in the safe and efficient transport of 
+        <strong><a href="{{ route('hazardous.waste') }}" style="font-weight:bold;">hazardous</a></strong> and 
+        <strong><a href="{{ route('nonhazardous.waste') }}" style="font-weight:bold;">non-hazardous waste</a></strong>. 
+        Our mission is to provide eco-friendly and compliant waste management solutions in Kanpur and across Uttar Pradesh
+        that prioritize the safety of our 
         <a href="#clients" style="color:#1a1f71; font-weight:600; text-decoration:underline; cursor:pointer;">
             clients
-        </a>
-        and communities.
+        </a> and communities.
     </p>
 
 
+    <p style="font-size:17px; line-height:1.8; color:#333; margin-bottom:20px;">
+        Proper <a href="{{ route('waste.management') }}" style="color:#1a1f71; font-weight:bold; text-decoration:underline;">
+        waste management in Kanpur</a> is essential for protecting public health and the environment. Our experienced team 
+        follows industry best practices and advanced techniques to handle, transport, and dispose of waste responsibly. 
+        Partnering with us helps businesses streamline their waste processes, minimize environmental impact, and stay fully 
+        compliant with government regulations.
+    </p>
+
     <p style="font-size:17px; line-height:1.8; color:#333;">
-        Proper <a href="{{ route('waste.management') }}" style="color:#1a1f71; font-weight:bold;">
-        waste management</a> is critical to protecting public health and the environment. Our experienced team uses advanced techniques and industry best practices to handle, transport, and dispose of waste responsibly. By partnering with us, businesses can streamline their waste management processes, reduce environmental impact, and stay fully compliant with government regulations.
+        Whether you require industrial waste transport, hazardous waste disposal, or 
+        eco-friendly waste solutions in Kanpur, Aradhya Road Lines is your trusted partner for 
+        reliable and sustainable waste management.
     </p>
 
     <!-- Request Pickup Button -->
-    <div style="text-align:center; margin:20px 0;">
+    <div style="text-align:center; margin:30px 0;">
+
         <button onclick="openPickupForm()" 
-            style="padding:12px 25px; font-size:18px; background:#1a1f71; color:white; border:none; border-radius:8px; cursor:pointer;">
-            Request Pickup
+            style="padding:14px 30px; font-size:18px; background:#1a1f71; color:white; border:none; border-radius:8px; cursor:pointer; transition:0.3s;">
+            Request Waste Pickup
         </button>
+
+        <!-- Find Us Now Button -->
+        <a href="{{ route('contact') }}" 
+        style="display:inline-block; margin-top:15px; padding:12px 28px; font-size:18px; border:2px solid #1a1f71; color:#1a1f71; border-radius:8px; cursor:pointer; text-decoration:none; transition:0.3s;">
+            Find Us Now
+        </a>
+
     </div>
 
 </section>
+
 
 <!-- Hazardous vs Non-Hazardous Section -->
 <section id="hazard" style="padding:10px 20px; max-width:90%; margin:0 auto;">
@@ -325,19 +345,44 @@
         width: 500px;
     }
 
-    /* Slider */
-    .slide-img {
-        width:100%;
-        flex-shrink:0;
-        height:450px;
-        object-fit:cover;
+    /* Slider Wrapper */
+    .slider-section {
+        width: 99%;
+        max-width: 1200px;
+        height: 450px;            /* fixed height */
+        margin: 20px auto 10px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #000;
     }
 
+    /* Image */
+    .slide-img {
+        width: 100%;
+        height: 450px;
+        flex-shrink: 0;
+        object-fit: cover;        /* zooms image slightly */
+        object-position: center;  /* keeps center area visible */
+        transition: transform 0.4s ease-in-out;
+    }
+
+    /* Optional smooth zoom effect on slide */
+    .slides {
+        display: flex;
+        transition: transform 1s ease-in-out;
+    }
+
+    .slide-img:hover {
+        transform: scale(1.03);
+    }
+
+    /* Navigation Buttons */
     .slider-btn {
         position:absolute;
         top:50%;
         transform:translateY(-50%);
-        background:rgba(0,0,0,0.5);
+        background:rgba(0,0,0,0.4);
         color:white;
         border:none;
         padding:10px;
@@ -347,19 +392,17 @@
         z-index:10;
     }
 
-    .slider-section {
-        max-width: 1200px;
-        margin: 20px auto 50px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-
     #prev { left:10px; }
     #next { right:10px; }
 
+    /* Mobile */
     @media(max-width:768px){
-        .slide-img { height:300px; }
+        .slider-section {
+            height: 240px;
+        }
+        .slide-img {
+            height: 300px;
+        }
     }
 
     .pickup-submit-btn.loading {

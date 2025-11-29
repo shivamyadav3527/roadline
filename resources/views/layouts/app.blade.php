@@ -14,10 +14,10 @@
         content="All India Waste Management Company is a UPPCB certified hazardous waste management provider offering disposal, recycling, transportation, biomedical waste handling, and industrial waste solutions across India. Reliable, eco-friendly, and government-approved waste management services.">
 
     <meta name="keywords" 
-        content="waste management company, hazardous waste certified, UPPCB certified, hazardous waste disposal, industrial waste management, biomedical waste disposal, waste recycling services, waste transport company, eco-friendly waste solutions, India waste management">
+        content="waste management, waste management company,waste management company in kanpur, waste management company in UP(Uttar Pradesh), hazardous waste certified, UPPCB certified, hazardous waste disposal, industrial waste management, biomedical waste disposal, waste recycling services, waste transport company, eco-friendly waste solutions, India waste management">
 
     <meta name="robots" content="index, follow">
-    <meta name="author" content="All India Waste Management Company">
+    <meta name="author" content="All India Waste Management Company in kanpur, UP">
 
     <!-- Open Graph for social SEO -->
     <meta property="og:title" content="All India Waste Management Company | UPPCB Certified">
@@ -250,7 +250,7 @@
             href="{{ url('/services') }}">Services</a>
 
             <a class="nav-link {{ Request::is('permits') ? 'active-link' : '' }}" 
-            href="{{ url('/permits') }}">Permits & Forms</a>
+            href="{{ url('/permits') }}">Permits & Recognitions</a>
 
             <a class="nav-link {{ Request::is('about') ? 'active-link' : '' }}" 
             href="{{ url('/about') }}">About Us</a>
@@ -271,8 +271,8 @@
     <footer style="color:white; padding:20px 10px; text-align:center;">
         <p style="margin:0; font-size:14px;">&copy; 2025 All India Waste Management And Transport</p>
         <div style="margin-top:10px; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:10px; font-size:14px;">
-            <span>Email: <a href="mailto:allindiawastemangement@gmail.com"
-                    style="color:white; text-decoration:underline;">allindiawastemangement@gmail.com</a></span> |
+            <span>Email: <a href="mailto:allindiawastemanagement@gmail.com"
+                    style="color:white; text-decoration:underline;">allindiawastemanagement@gmail.com</a></span> |
             <span>Phone: <a href="tel:+918318612573" style="color:white; text-decoration:underline;">+91 8318612573</a></span> |
             <span>Follow us:</span>
             <a href="https://www.facebook.com/profile.php?id=61584134677581" target="_blank" style="color:white; font-size:18px;"><i

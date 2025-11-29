@@ -74,7 +74,7 @@
 </style>
 
 <!-- Services Section -->
-<section id="services" style="padding:60px 20px; max-width:1200px; margin:0 auto; font-size:17px; line-height:1.8; color:#333;">
+<section id="services" style="padding:30px 20px; max-width:1200px; margin:0 auto; font-size:17px; line-height:1.8; color:#333;">
 
     <h2 class="services-header">
         Our Services

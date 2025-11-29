@@ -3,7 +3,7 @@
 @section('content')
 
 <style>
-    /* Permits Header */
+    /* Header */
     .permits-header {
         color: #1a1f71;
         font-size: 34px;
@@ -22,7 +22,7 @@
         left: 50%;
         bottom: 0;
         transform: translateX(-50%);
-        width: 60px;
+        width: 70px;
         height: 3px;
         background: linear-gradient(to right, #1a1f71, #ffd700);
         border-radius: 2px;
@@ -35,10 +35,10 @@
     }
 
     .permits-header:hover::after {
-        width: 250px;
+        width: 260px;
     }
 
-    /* PCB Certification Highlight */
+    /* Highlight Box */
     .pcb-cert {
         color: #1a1f71;
         font-weight: 700;
@@ -51,8 +51,8 @@
         font-size: 17px;
     }
 
-    /* Hover Animation for Permits Card */
-    .permit-card {
+    /* Cards */
+    .doc-card {
         flex: 1 1 45%;
         background: #f7f7f7;
         padding: 20px;
@@ -63,12 +63,28 @@
         margin-bottom: 30px;
     }
 
-    .permit-card:hover {
+    .doc-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    /* Vehicles Table Styling */
+    .doc-card iframe {
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    /* Container */
+    .docs-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    /* Vehicles Table */
     .vehicles-table {
         width: 100%;
         border-collapse: collapse;
@@ -93,105 +109,80 @@
 
     .vehicles-table th {
         font-weight: 600;
-        text-align: center;
-    }
-
-    .vehicles-table td {
-        font-weight: 500;
-        color: #333;
-    }
-
-    .vehicles-table tbody tr:hover {
-        background: #f1f1f1;
-    }
-
-    /* Permits Cards Container */
-    .permits-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-between;
-        margin-bottom: 50px;
-    }
-
-    .permit-card iframe {
-        width: 100%;
-        height: 500px;
-        border-radius: 10px;
-        border: none;
     }
 
     /* Responsive */
     @media (max-width: 900px) {
-        .permit-card {
-            flex: 1 1 100%;
-        }
-
-        .permit-card iframe {
-            height: 400px;
-        }
-
-        .vehicles-table th, .vehicles-table td {
-            padding: 12px;
-        }
-
-        .permits-header {
-            font-size: 28px;
-        }
+        .doc-card { flex: 1 1 100%; }
+        .doc-card iframe { height: 420px; }
     }
 
     @media (max-width: 480px) {
-        .vehicles-table th, .vehicles-table td {
-            font-size: 14px;
-            padding: 10px;
-        }
-
-        .permits-header {
-            font-size: 24px;
-        }
+        .permits-header { font-size: 26px; }
+        .vehicles-table th, .vehicles-table td { font-size: 14px; padding: 10px; }
     }
-
 </style>
 
-<!-- PERMITS PAGE -->
-<section style="padding:50px 20px; max-width:1100px; margin:0 auto;">
 
-    <!-- Page Header -->
+<!-- PAGE CONTENT -->
+<section style="padding:30px 20px; max-width:1100px; margin:0 auto;">
+
+    <!-- Header -->
     <h2 class="permits-header">
-        Permits & Forms
+        Permits & Recognitions
     </h2>
 
-    <!-- PCB Certification Reference -->
+    <!-- PCB Notice -->
     <div class="pcb-cert">
-        <strong>PCB Certified:</strong> Reference Number <strong>29486/UPPCB</strong>
+        <strong>PCB Certified :</strong> Reference Number <strong>29486/UPPCB</strong>
     </div>
 
     <p style="font-size:17px; line-height:1.8; text-align:center; max-width:850px; margin:0 auto 40px;">
-        Below are the official permits and authorization documents required for transporting 
-        hazardous and non-hazardous waste. You can also view our fleet of permitted vehicles and 
-        download the necessary forms for compliance.
+        Below are our official permits required for transporting hazardous 
+        and non-hazardous waste across Kanpur and Uttar Pradesh. You can also view our approved fleet 
+        and client appreciation documents recognizing our reliable services.
     </p>
 
-    <!-- Permits Images Section -->
-    <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">Our Permits</h3>
-    <div class="permits-container">
-        <div class="permit-card">
+
+    <!-- Section 1: Permits -->
+    <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">
+        Official Permits & Licenses
+    </h3>
+
+    <div class="docs-container">
+
+        <!-- Permit PDF -->
+        <div class="doc-card">
             <h4 style="color:#ffd700; font-size:18px; margin-bottom:15px; font-weight:600;">
-                Waste Transport Permit
+                Waste Transport Permit (Authorized by UPPCB)
             </h4>
             <iframe src="{{ asset('pdfs/permit.pdf') }}"></iframe>
         </div>
 
-        <div class="permit-card">
-            <h4 style="color:#ffd700; font-size:18px; margin-bottom:15px; font-weight:600;">
-                Hazardous Waste Permit
-            </h4>
-            <iframe src="{{ asset('pdfs/permit.pdf') }}"></iframe>
-        </div>
     </div>
 
+
+    <!-- Section 2: Appreciation Letters -->
+    <h3 style="color:#1a1f71; margin-bottom:20px; margin-top:40px; font-size:26px;">
+        Client Appreciations
+    </h3>
+
+    <div class="docs-container">
+
+        <!-- Appreciation Letter PDF -->
+        <div class="doc-card">
+            <h4 style="color:#ffd700; font-size:18px; margin-bottom:15px; font-weight:600;">
+                Client Appreciation Letter
+            </h4>
+            <iframe src="{{ asset('pdfs/appreciate.pdf') }}"></iframe>
+        </div>
+
+    </div>
+
+
     <!-- Vehicles Table -->
-    <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">Our Fleet</h3>
+    <h3 style="color:#1a1f71; margin-bottom:20px; font-size:26px;">Our Approved Fleet</h3>
+
     <table class="vehicles-table">
         <thead>
             <tr>
@@ -200,22 +191,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>UP71T0628</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>UP78FN6728</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>UP78DT2188</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>UP78HT6699</td>
-            </tr>
+            <tr><td>1</td><td>UP71T0628</td></tr>
+            <tr><td>2</td><td>UP78FN6728</td></tr>
+            <tr><td>3</td><td>UP78DT2188</td></tr>
+            <tr><td>4</td><td>UP78HT6699</td></tr>
         </tbody>
     </table>
 
